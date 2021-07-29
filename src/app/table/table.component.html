@@ -1,0 +1,46 @@
+<app-select
+  class="sort"
+  title="Сортировка"
+  [options]="options"
+></app-select>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table__head">Дата начала</th>
+      <th class="table__head">Название</th>
+      <th class="table__head">Участников</th>
+      <th class="table__head table__head_hidden">Тренер</th>
+      <th class="table__head">Прогресс</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of list">
+      <td class="table__cell">{{ item.data }}</td>
+      <td class="table__cell">
+        <p class="table__text">{{ item.title }}</p>
+      </td>
+      <td class="table__cell">{{ item.count }}</td>
+      <td class="table__cell table__cell_hidden">{{ item.lead }}</td>
+      <td class="table__cell">
+        <div class="table__text table__text_center">
+          <img class="table__icon" src="/assets/icons/pie.svg">
+          <span>{{ item.progress }} %</span>
+
+          <app-button
+            class="table__more"
+            title="Действия"
+            iconPath="/assets/icons/more.svg"
+            [matMenuTriggerFor]="menu"
+          >
+          </app-button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

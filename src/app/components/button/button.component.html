@@ -1,0 +1,8 @@
+<button [ngClass]="{ button: true, button_accent: type === 'accent', button_padding: text }" [title]="title">
+  <span *ngIf="iconPath" class="button__icon">
+    <img [src]="iconPath">
+  </span>
+  <span *ngIf="text" class="button__text">
+    {{ text }}
+  </span>
+</button>

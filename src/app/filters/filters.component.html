@@ -1,0 +1,63 @@
+<div class="filters">
+  <div class="search">
+    <app-input
+      class="search__input"
+      iconPath="/assets/icons/search.svg"
+      placeholder="Поиск"
+    ></app-input>
+
+    <app-button
+      class="search__settings search__settings_mobile"
+      title="Настроить фильтр"
+      iconPath="/assets/icons/settings.svg"
+      [matMenuTriggerFor]="menu"
+    >
+    </app-button>
+
+  </div>
+  <div class="other-filters">
+    <div class="other-filters__item">
+      <app-select
+        title="Программа"
+        [options]="programmOptions"
+      ></app-select>
+    </div>
+    <div class="other-filters__item">
+      <app-select
+        title="Период"
+        [options]="periodOptions"
+      ></app-select>
+    </div>
+    <div class="other-filters__item">
+      <app-select
+        title="Статус"
+        [options]="statusOptions"
+      ></app-select>
+    </div>
+  </div>
+</div>
+
+<div class="buttons">
+  <p class="buttons__text">34 сессии</p>
+  <app-button
+    type="accent"
+    class="buttons__button"
+    title="Настроить фильтр"
+    text="Настроить фильтр"
+    iconPath="/assets/icons/settings_active.svg"
+    [matMenuTriggerFor]="menu"
+  >
+  </app-button>
+  <app-button
+    class="buttons__button"
+    title="Сбросить"
+    text="Сбросить"
+    iconPath="/assets/icons/close.svg"
+  >
+  </app-button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

@@ -1,0 +1,46 @@
+.button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
+
+  &:hover {
+    background: #f6f6f6;
+  }
+
+  &:focus {
+    background: #e4e4e4;
+  }
+
+  &:active {
+    background: #dcdcdc;
+  }
+
+  &_accent {
+    /* Primary / Blue */
+    color: #1071FF;
+  }
+
+  &_padding {
+    padding: 0 20px;
+  }
+
+  &__icon {
+    line-height: 1;
+  }
+
+  &__text {
+    line-height: 16px;
+    margin-left: 12px;
+  }
+}

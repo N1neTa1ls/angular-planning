@@ -1,0 +1,5 @@
+<div class="radio" *ngFor="let item of items; let i = index">
+  <input class="radio__field" type="radio" [id]="item.value"
+    name="radio" [value]="item.value" [checked]="i === 0">
+  <label class="radio__text" [for]="item.value">{{ item.title }}</label>
+</div>

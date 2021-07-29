@@ -1,0 +1,8 @@
+<div class="tabs">
+  <p
+    *ngFor="let item of items; let i = index"
+    class="tabs__item"
+    [class.tabs__item_active]="selectedIndex === i"
+    (click)="selectedIndex = i"
+  >{{ item }}</p>
+</div>

@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="title">
+    <h2 class="h2">Планирование</h2>
+    <div class="title__buttons">
+      <app-button
+        type="default"
+        title="Сохранить"
+        iconPath="/assets/icons/ok.svg"
+      >
+      </app-button>
+      <app-button
+        type="default"
+        title="Закрыть"
+        iconPath="/assets/icons/close.svg"
+      >
+      </app-button>
+    </div>
+  </div>
+  <app-tabs
+    [items]="['Основное', 'Участники']"
+  >
+  </app-tabs>
+  <div class="programm">
+    <app-select
+      title="Программа"
+      [options]="options"
+    ></app-select>
+  </div>
+
+  <h3 class="h3">Мероприятие, дата и время проведения</h3>
+
+  <div class="event-list" *ngFor="let event of events">
+    <app-select
+      title="Мероприятие"
+      [disabled]="true"
+      [options]="event.info"
+    ></app-select>
+
+    <div class="event-list__info">
+      <div class="event-list__info-item">
+        <app-select
+          title="Дата"
+          [options]="event.data"
+        ></app-select>
+      </div>
+      <div class="event-list__info-item">
+        <app-select
+          class="event-list__info-item"
+          title="Время"
+          [options]="event.time"
+        ></app-select>
+      </div>
+      <div class="event-list__info-item">
+        <app-select
+          class="event-list__info-item"
+          title="Тренер"
+          [options]="event.lead"
+        ></app-select>
+      </div>
+    </div>
+    
+  </div>
+  
+  <h3 class="h3">Условия записи по коду</h3>
+  <app-radio-group
+    [items]="radioOptions"
+  >
+  </app-radio-group>
+</div>

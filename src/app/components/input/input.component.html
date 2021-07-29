@@ -1,0 +1,4 @@
+<div class="input">
+  <img *ngIf="iconPath" [src]="iconPath" class="input__img">
+  <input [type]="type" [ngClass]="{ input__field: true, input__field_icon: iconPath }" [placeholder]="placeholder">
+</div>

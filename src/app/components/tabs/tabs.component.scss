@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 0 -16px;
+  padding: 0 8px;
+  
+
+  &__item {
+    padding: 3px 0 8px;
+    margin: 0 8px -1px;
+
+    &_active {
+      border-bottom: 2px solid #1071FF;/* Primary / Blue */
+    }
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  .tabs {
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      margin: 0px 24px 0 0;
+    }
+  }
+}
